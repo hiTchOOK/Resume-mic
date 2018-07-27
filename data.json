@@ -1,0 +1,31 @@
+{
+ "details":{
+       "name": "soonu",
+       "age" : "23",
+       "phone":"9372562771",
+        "email":"kanchisushma142@gmail.com",
+        "study":"btech",
+        "image":"babyy.jpg"
+ },
+ "education" : [
+ 	{
+       "course":"B.Tech",
+       "college":"MIC COLLEGE",
+       "branch":"CSE",
+       "percantage":"86%"
+},
+{
+       "course":"Intemediate",
+       "college":"Nagarjuna junior college",
+       "branch":"MPC",
+       "percantage":"97%"
+
+},
+{
+
+       "course":"10th",
+       "college":"Loyola high school ",
+       "branch":"ssc",
+       "percantage":"97%"
+},
+]
