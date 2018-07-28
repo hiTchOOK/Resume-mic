@@ -5,20 +5,20 @@
        "phone":"9372562771",
         "email":"kanchisushma142@gmail.com",
         "study":"btech",
-        "image":"babyy.jpg"
+        "image":"female.jpg"
  },
  "education" : [
  	{
        "course":"B.Tech",
        "college":"MIC COLLEGE",
        "branch":"CSE",
-       "percantage":"86%"
+       "percentage":"86%"
 },
 {
        "course":"Intemediate",
        "college":"Nagarjuna junior college",
        "branch":"MPC",
-       "percantage":"97%"
+       "percentage":"97%"
 
 },
 {
@@ -26,6 +26,28 @@
        "course":"10th",
        "college":"Loyola high school ",
        "branch":"ssc",
-       "percantage":"97%"
-},
-]
+       "percentage":"97%"
+}
+],
+"skills":[
+{
+
+  "title":"programming  Languages ",
+   "output": [
+         "C","C++","python","Java"
+       ]  
+     },
+{
+      "title":"operating systems",
+      "output":[
+          "Linux","Mac","Ubuntu","Windows"
+
+        ]
+
+       }
+   ],
+
+ "carrier": {
+  "co": "To  associate with organization,utilize my technical skills to growth of our company .I am here to develop my knowledge and it is useful for our company "
+}
+}

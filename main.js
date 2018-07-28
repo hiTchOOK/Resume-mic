@@ -2,18 +2,20 @@ function loadjson(file,callback) {
 	var xhr=new XMLHttpRequest();
 	xhr.overrideMimeType("application/json");
     xhr.open("GET",file,true);
-    xhr.onreadystatechange=function(){
-         if(xhr.readyState ===4 && xhr.status=="200") {
-         callback(xhr.responseText);
+    xhr.onreadystatechange=function()  {
+         if(xhr.readyState ===4 && xhr.status =="200")  {
+              callback(xhr.responseText);
       }
     }
     xhr.send();
 }
-loadjson("data.json",function(text){
+loadjson("data.json",function(text) {
 	let data=JSON.parse(text);
 	console.log(data);
 	first(data.details);
+	carr(data.carrier);
 	edu(data.education);
+	skill(data.skills);
 })
 var main=document.querySelector(".main");
 var left=document.createElement("div");
@@ -43,10 +45,15 @@ var right=document.createElement("div");
 right.classList.add("right");
 main.appendChild(right);
 function edu(education){
+	var e=document.createElement("h1");
+	e.textContent="educational details"; 
+	right.appendChild(e);
+	e.appendChild(document.createElement("HR"));
 var un=document.createElement("ul");
-right.appendChild(un);
-for (var i =0;i<education.length; i++) {
-var l=document.createElement("li");
+e.appendChild(un);
+for (var i =0;i<education.length; i++) { 
+
+var l=document.createElement("h2");
 l.textContent=education[i].course;
 un.appendChild(l);
 var l2=document.createElement("li");
@@ -58,9 +65,33 @@ un.appendChild(l3);
 var l4=document.createElement("li");
 l4.textContent=education[i].percentage;
 un.appendChild(l4);
-
 }
-
-
-
+}
+function skill(skills){
+var r=document.createElement("div");
+r.classList.add("sset");
+right.appendChild(r); 
+var head=document.createElement("h2");
+head.textContent="Skills Set";
+right.appendChild(head);
+r.appendChild(head);
+r.appendChild(document.createElement("HR"));
+var t=document.createElement("table");
+var tabledata="";
+for ( i = 0;i <skills.length; i++){
+	tabledata+="<tr><td>"+skills[i].title+"</td><td>"+skills[i].output+"</td></tr>";
+	t.innerHTML=tabledata;
+     }
+      head.appendChild(t);
+  }
+function carr(carrier){
+var a=document.createElement("div");
+a.classList.add("carrier");
+right.appendChild(a);
+var e=document.createElement("h2");
+e.textContent="Carrier Objective";
+a.appendChild(e);
+var para=document.createElement("p");
+para.textContent=carrier.co;
+e.appendChild(para);
 }
